@@ -39,7 +39,7 @@ html {
   }
 
   .pic0 {
-    border: 4px dashed #eeffee;
+    border: 4px dashed var(--theme-color-2);
     width: 85%;
     position: sticky;
     text-align: center;
@@ -48,7 +48,7 @@ html {
   }
 
   .pic1 {
-    border: 4px dashed #eeffee;
+    border: 4px dashed var(--theme-color-2);
     width: 30%;
     position: sticky;
     text-align: center;
