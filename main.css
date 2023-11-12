@@ -39,8 +39,7 @@ html {
   }
 
   .pic {
-    text-align: center;
-    border: 2px solid var(--theme-color-2);
+    border: 2px double var(--theme-color-2);
   }
   
   h2 {
