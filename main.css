@@ -39,7 +39,7 @@ html {
   }
 
   .pic0 {
-    border: 2px double #eeffee;
+    border: 4px dashed #eeffee;
     width: 85%;
     position: sticky;
     text-align: center;
@@ -48,7 +48,7 @@ html {
   }
 
   .pic1 {
-    border: 2px double #eeffee;
+    border: 4px dashed #eeffee;
     width: 30%;
     position: sticky;
     text-align: center;
