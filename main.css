@@ -35,8 +35,6 @@ html {
     width: 75%;
     padding: 0.2em 0.5em;
     letter-spacing: 0.1em;
-    box-sizing: border-box;
-    background: #eeffee;
   }
   
   h2 {
