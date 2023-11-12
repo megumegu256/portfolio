@@ -41,8 +41,6 @@ html {
   .pic {
     position: sticky;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     border: 2px solid var(--theme-color-2);
   }
   
