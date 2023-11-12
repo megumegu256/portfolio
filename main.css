@@ -27,7 +27,7 @@ html {
   }
   
   .mine {
-    position: static;
+    position: sticky;
     text-align: center;
     font-size: 128%;
     width: 75%;
