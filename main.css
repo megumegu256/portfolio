@@ -26,6 +26,14 @@ html {
   }
   
   h1::after {
+    position: absolute;
+    left: 0.4em;
+    font-weight: bold;
+    font-family: "Remix Icon";
+    content: "&#xEC69";
+    top: 0.2em;
+    font-size: 85%;
+    color: var(--theme-color-2);
   }
   
   h2 {
