@@ -27,7 +27,8 @@ html {
   }
   
   .mine {
-    position: relative;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     font-size: 128%;
     width: 75%;
