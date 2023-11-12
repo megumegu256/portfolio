@@ -28,9 +28,9 @@ html {
   
   .mine {
     justify-content: space-evenly;
-    width: 22%;
+    width: 100%;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0 0 0 0;
     box-sizing: border-box;
     background: #eeffee;
   }
