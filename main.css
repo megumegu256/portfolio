@@ -40,7 +40,7 @@ html {
 
   .pic {
     border: 2px double var(--theme-color-2);
-    width: 64%;
+    width: 20%;
   }
   
   h2 {
