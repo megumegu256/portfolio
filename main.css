@@ -23,9 +23,6 @@ html {
     font-size: 280%;
     padding: 0.2em 0.5em;
     letter-spacing: 0.1em;
-    background: var(--theme-color-2);
-    box-shadow: 0px 0px 0px 5px var(--theme-color-2);
-    border: dashed 2px white;
   }
   
   h1::after {
@@ -49,27 +46,12 @@ html {
   }
   
   h2::before {
-    position: absolute;
-    left: 0.4em;
-    font-weight: bold;
-    font-family: "Font Awesome 6 Free";
-    content: "\f6ad";
-    top: 0.2em;
-    font-size: 85%;
-    color: var(--theme-color-1);
   }
   
   img {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 20px;
   }
   
   strong {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 125%;
-    padding: 0 0.2em;
-    color: var(--theme-color-1);
   }
   
   a {
