@@ -49,7 +49,7 @@ html {
     justify-content: space-between;
   }
   .item-list .item {
-    width: 31%;
+    width: 25%;
     margin: 0;
     padding: 0 0 20px 0;
     box-sizing: border-box;
@@ -60,7 +60,7 @@ html {
     padding: 0;
   }
   .item-list .item .image img {
-    width: 80%;
+    width: 100%;
   }
   .item-list .item .title {
     margin: 10px 0 0;
