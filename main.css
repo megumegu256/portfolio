@@ -46,7 +46,7 @@ html {
 
   .item-list {
     display: flex;
-    justify-content: space-arround;
+    justify-content: space-evenly;
   }
   .item-list .item {
     width: 25%;
