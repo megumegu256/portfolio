@@ -39,7 +39,6 @@ html {
   }
 
   .pic {
-    position: sticky;
     text-align: center;
     border: 2px solid var(--theme-color-2);
   }
