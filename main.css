@@ -18,10 +18,10 @@ html {
   }
 
   line{
-    color: var(--theme-color-2);
     position: relative;
     width:400px;
     height:400px;
+    background: var(--theme-color-2);
   }
   
 
