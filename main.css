@@ -17,13 +17,26 @@ html {
     padding: 0px 30px;
   }
 
-  .box {
-    color: var(--theme-color-1);
-    margin       : auto;
-    width        : 100px;
-    height       : 500px;
-  }
+
+
+  .parent{
+    position: relative;
+    width:400px;
+    height:400px;
+    background: #9E9E9E;
+}
+
+.child{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: var(--theme-color-2);
+}
   
+
+
   h1 {
     position: relative;
     text-align: center;
