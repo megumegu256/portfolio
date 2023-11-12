@@ -38,9 +38,14 @@ html {
 
   }
 
-  .pic {
+  .pic0 {
     border: 2px double var(--theme-color-2);
-    width: 50%;
+    width: 85%;
+  }
+
+  .pic1 {
+    border: 2px double var(--theme-color-2);
+    width: 35%;
   }
   
   h2 {
