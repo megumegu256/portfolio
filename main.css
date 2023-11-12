@@ -40,6 +40,41 @@ html {
   
   h2::before {
   }
+
+
+
+
+  .item-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item-list .item {
+    width: 31%;
+    margin: 0;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+    background: #eee;
+  }
+  .item-list .item .image {
+    margin: 0;
+    padding: 0;
+  }
+  .item-list .item .image img {
+    width: 100%;
+  }
+  .item-list .item .title {
+    margin: 10px 0 0;
+    padding: 0 20px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .item-list .item .description {
+    margin: 5px 0 0;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  
+
   
   img {
   }
