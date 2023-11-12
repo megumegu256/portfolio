@@ -17,13 +17,6 @@ html {
     padding: 0px 30px;
   }
 
-  line{
-    position: relative;
-    width:400px;
-    height:400px;
-    background: var(--theme-color-2);
-  }
-  
 
   h1 {
     position: relative;
