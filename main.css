@@ -27,10 +27,10 @@ html {
   }
   
   .mine {
+    position: center;
     text-align: center;
     font-size: 128%;
     width: 75%;
-    margin: 0;
     padding: 0.2em 0.5em;
     letter-spacing: 0.1em;
     box-sizing: border-box;
