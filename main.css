@@ -31,6 +31,8 @@ html {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     font-size: 128%;
     width: 64%;
     box-sizing: border-box;
