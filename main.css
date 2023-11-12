@@ -7,15 +7,8 @@ html {
     color: #646464;
   }
   
-line{
-  color: var(--theme-color-2);
-  position: relative;
-  width:400px;
-  height:400px;
-}
-
   body {
-    /*color: var(--main-foreground);*/
+    color: var(--main-foreground);
     line-height: 1.5;
     word-wrap: break-word;
     box-sizing: border-box;
@@ -23,6 +16,14 @@ line{
     margin: 2em auto;
     padding: 0px 30px;
   }
+
+  line{
+    color: var(--theme-color-2);
+    position: relative;
+    width:400px;
+    height:400px;
+  }
+  
 
   h1 {
     position: relative;
