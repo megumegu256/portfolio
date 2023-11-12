@@ -41,11 +41,15 @@ html {
   .pic0 {
     border: 2px double var(--theme-color-2);
     width: 85%;
+    position: sticky;
+    text-align: center;
   }
 
   .pic1 {
     border: 2px double var(--theme-color-2);
     width: 35%;
+    position: sticky;
+    text-align: center;
   }
   
   h2 {
