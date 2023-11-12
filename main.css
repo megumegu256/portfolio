@@ -15,7 +15,7 @@ line{
 }
 
   body {
-    color: var(--main-foreground);
+    /*color: var(--main-foreground);*/
     line-height: 1.5;
     word-wrap: break-word;
     box-sizing: border-box;
