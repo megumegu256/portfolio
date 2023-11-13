@@ -35,7 +35,7 @@ html {
     font-size: 128%;
     width: 64%;
     box-sizing: border-box;
-    background: #ccffee;
+    background: #ddffee;
 
   }
 
@@ -77,7 +77,7 @@ html {
     margin: 0;
     padding: 0 0 20px 0;
     box-sizing: border-box;
-    background: #eeffee;
+    background: #ddffee;
   }
   .item-list .item .image {
     margin: 0;
