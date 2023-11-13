@@ -83,7 +83,7 @@ html {
     padding: 0;
   }
   .item-list .item .image img {
-    width: 50%;
+    width: 300px;
   }
   .item-list .item .title {
     margin: 10px 0 0;
