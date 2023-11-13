@@ -72,7 +72,7 @@ html {
     justify-content: space-evenly;
   }
   .item-list .item {
-    width: 10%;
+    width: 20%;
     margin: 0;
     padding: 0 0 20px 0;
     box-sizing: border-box;
@@ -83,7 +83,7 @@ html {
     padding: 0;
   }
   .item-list .item .image img {
-    width: 100%;
+    width: 50%;
   }
   .item-list .item .title {
     margin: 10px 0 0;
