@@ -10,7 +10,7 @@ html {
   body {
     color: var(--main-foreground);
     line-height: 1.5;
-    background: linear-gradient(--theme-color-1, --theme-color-2);
+    background: linear-gradient(var(--theme-color-1), var(--theme-color-2));
     word-wrap: break-word;
     box-sizing: border-box;
     max-width: 980px;
