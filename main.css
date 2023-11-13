@@ -83,6 +83,7 @@ html {
     padding: 0;
   }
   .item-list .item .image img {
+    width: 50px;
     height: 50px;
   }
   .item-list .item .title {
