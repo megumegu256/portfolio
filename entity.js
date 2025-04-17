@@ -133,14 +133,15 @@ function trackMouse(eyes, pupils) {
 function blinkEyes(eyes) {
   function blink() {
     eyes.forEach((eye) => {
-      eye.style.height = '10px'; // 瞬き時に目を閉じる
+      eye.style.transformOrigin = 'bottom';
+      eye.style.height = '5px'; // 瞬き時に目を閉じる
     });
 
     setTimeout(() => {
       eyes.forEach((eye) => {
         eye.style.height = '40px'; // 瞬き後に目を開ける
       });
-    }, 100); // 瞬きの時間（200ms）
+    }, 50); // 瞬きの時間（200ms）
 
     setTimeout(blink, Math.random() * 3000 + 2000); // 次の瞬きまでの間隔（2秒から7秒）
   }
