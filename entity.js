@@ -31,7 +31,7 @@ function createEntity() {
         position: absolute;
         width: 100px;
         height: 100px;
-        background-color: #00ccff;
+        background-color: #00bbee;
         border: 1px solid lightgreen;
         border-radius: 50%;
         display: flex;
