@@ -107,7 +107,7 @@ function moveEntityRandomly(entity) {
       entity.style.transform = `translate(${targetX}px, ${targetY}px)`;
   
       // 次の移動をランダムなタイミングで設定
-      setTimeout(move, Math.random() * 3000 + 1000); // 2秒から5秒の間で移動
+      setTimeout(move, Math.random() * 3000 + 500); // 2秒から5秒の間で移動
     }
   
     move();
