@@ -1,0 +1,37 @@
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25%; /* オブジェクトサイズの0.25倍の余白を確保 */
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .item {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image img {
+    border-radius: 0.75rem;
+    object-fit: cover;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    margin: 0.5rem 0 0.25rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+  }
+  
