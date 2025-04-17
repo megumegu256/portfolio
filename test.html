@@ -1,229 +1,113 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <title>Megu's Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自由に動き回るエンティティ</title>
   <style>
-    html {
-      font-family: "Yu Gothic", system-ui;
-      --theme-color-1: #db4aff;
-      --theme-color-2: #79fff2;
-      color: #323232;
-      scroll-behavior: smooth;
-    }
-
     body {
-      background: linear-gradient(135deg, #d4f0ff 0%, #ffe1f8 100%);
-      margin: 0 auto;
-      padding: 2em 1em;
-      max-width: 1080px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.8em;
-      margin-bottom: 0.5em;
-      color: #4a006e;
-      animation: fadeInDown 1s ease-out;
-    }
-
-    h2 {
-      font-size: 2em;
-      border-left: 6px solid var(--theme-color-1);
-      padding-left: 0.75em;
-      margin-top: 2.5em;
-      color: #3c3c3c;
-      opacity: 0;
-      transform: translateX(-30px);
-      transition: all 0.8s ease-out;
-    }
-
-    .mine {
-      background: rgba(255, 255, 255, 0.8);
-      border-left: 5px solid var(--theme-color-2);
-      padding: 1em;
-      margin: 0 auto 2em;
-      text-align: center;
-      font-size: 1.2em;
-      border-radius: 10px;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .item-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2em;
-      margin-top: 2em;
-    }
-
-    .item {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 0;
+      height: 100vh;
       overflow: hidden;
-      transition: transform 0.4s, box-shadow 0.4s;
+      background: linear-gradient(135deg, #d4f0ff 0%, #ffe1f8 100%);
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      text-align: center;
-      cursor: default;
+    }
+
+    .entity {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #ffcc00;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.1s linear;
+    }
+
+    .eye {
       position: relative;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-      transform-origin: top center;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .item.visible {
-      opacity: 1;
-      transform: translateY(0);
-      animation: swing 1.5s ease-out;
+    .pupil {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: black;
+      border-radius: 50%;
+      transition: transform 0.1s linear;
     }
 
-    @keyframes swing {
-      0% { transform: rotate(0deg); }
-      20% { transform: rotate(5deg); }
-      40% { transform: rotate(-4deg); }
-      60% { transform: rotate(3deg); }
-      80% { transform: rotate(-2deg); }
-      100% { transform: rotate(0deg); }
+    .eye.left {
+      transform: translateX(-20px);
     }
 
-    .item:active {
-      transform: scale(0.98);
+    .eye.right {
+      transform: translateX(20px);
     }
-
-    .item .image img {
-      width: 100%;
-      height: 140px;
-      object-fit: contain;
-      background: #f0f8ff;
-      padding: 1em;
-      transition: transform 0.3s;
-    }
-
-    .item:hover .image img {
-      transform: rotate(-3deg) scale(1.05);
-    }
-
-    .item .title {
-      font-size: 1.3em;
-      font-weight: bold;
-      margin: 0.5em 0 0.2em;
-      color: #4a006e;
-    }
-
-    .item .description {
-      font-size: 0.95em;
-      padding: 0 1em 1em;
-      color: #555;
-    }
-
-    a {
-      color: var(--theme-color-1);
-      border-bottom: 1px dashed;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #000;
-      background-color: var(--theme-color-1);
-      border-radius: 3px;
-      padding: 0.1em 0.3em;
-      border-bottom: none;
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes swing {
-      0%, 100% { transform: rotate3d(0, 0, 1, 0deg); }
-      25% { transform: rotate3d(0, 0, 1, 10deg); }
-      75% { transform: rotate3d(0, 0, 1, -10deg); }
-    }
-      
   </style>
-
-  <script>
-    let lastScroll = 0;
-
-window.addEventListener('scroll', function() {
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  let rotation = (lastScroll - currentScroll) / 2; // Adjust swing intensity here
-  rotation = Math.max(-10, Math.min(10, rotation)); // Limit the swing to 10 degrees in either direction
-
-  const items = document.querySelectorAll('.item');
-
-  items.forEach(item => {
-    if (rotation === 0) {
-      item.style.transition = 'transform 0.3s ease-out';
-    } else {
-      item.style.transition = '';
-    }
-
-    item.style.transform = `rotate3d(0, 0, 1, ${rotation}deg)`;
-  });
-
-  lastScroll = currentScroll;
-});
-  </script>
 </head>
 <body>
-  <h1>Megu's Profile</h1>
-  <div class="mine">
-    所属 - 大阪公立大学工業高等専門学校<br />
-    コース - 知能情報コース<br />
-    趣味 - プログラミング、ゲーム開発、数学パズル、3Dモデリング
-  </div>
-
-  <h2 class="fade-target">Languages</h2>
-  <div class="item-list fade-target">
-    <div class="item"><div class="image"><img src="./images/python.png" alt="Python" /></div><div class="title">Python</div><div class="description">Google ColaboratoryやTech Fullを通して学習中。</div></div>
-    <div class="item"><div class="image"><img src="./images/C.png" alt="C言語" /></div><div class="title">C</div><div class="description">パソコン甲子園競技で使用。</div></div>
-    <div class="item"><div class="image"><img src="./images/C++.png" alt="C++" /></div><div class="title">C++</div><div class="description">最初に学んだプログラミング言語。</div></div>
-    <div class="item"><div class="image"><img src="./images/Arduino.png" alt="Arduino" /></div><div class="title">Arduino</div><div class="description">マイクロコンピュータの授業で習得。</div></div>
-    <div class="item"><div class="image"><img src="./images/Java.png" alt="Java" /></div><div class="title">Java</div><div class="description">Progateで基礎を学習。</div></div>
-    <div class="item"><div class="image"><img src="./images/HTML.png" alt="HTML" /></div><div class="title">HTML</div><div class="description">実験実習と授業で学習。</div></div>
-    <div class="item"><div class="image"><img src="./images/CSS.png" alt="CSS" /></div><div class="title">CSS</div><div class="description">授業で学習。</div></div>
-    <div class="item"><div class="image"><img src="./images/hsp.png" alt="Hot Soup Processor" /></div><div class="title">Hot Soup Processor</div><div class="description">中学時代、ゲーム開発で使用。</div></div>
+  <div class="entity">
+    <div class="eye left">
+      <div class="pupil"></div>
+    </div>
+    <div class="eye right">
+      <div class="pupil"></div>
+    </div>
   </div>
 
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
+    const entity = document.querySelector('.entity');
+    const eyes = document.querySelectorAll('.eye');
+    const pupils = document.querySelectorAll('.pupil');
+
+    // エンティティをランダムに動き回らせる
+    function moveEntityRandomly() {
+      const maxX = window.innerWidth - 100; // エンティティの幅を考慮
+      const maxY = window.innerHeight - 100; // エンティティの高さを考慮
+
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+
+      entity.style.transition = 'transform 2s ease-in-out'; // スムーズな移動
+      entity.style.transform = `translate(${randomX}px, ${randomY}px)`;
+
+      // 次の移動をランダムなタイミングで設定
+      setTimeout(moveEntityRandomly, Math.random() * 3000 + 2000); // 2秒から5秒の間で移動
+    }
+
+    // マウスカーソルを追いかける目の動き
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      // 目の動きを計算
+      eyes.forEach((eye, index) => {
+        const rect = eye.getBoundingClientRect();
+        const eyeX = rect.left + rect.width / 2;
+        const eyeY = rect.top + rect.height / 2;
+
+        const angle = Math.atan2(mouseY - eyeY, mouseX - eyeX);
+        const pupilOffsetX = Math.cos(angle) * 10; // 瞳の移動範囲
+        const pupilOffsetY = Math.sin(angle) * 10;
+
+        pupils[index].style.transform = `translate(${pupilOffsetX}px, ${pupilOffsetY}px)`;
       });
-    }, {
-      threshold: 0.1
     });
 
-    document.querySelectorAll('.item, .fade-target').forEach(el => {
-      observer.observe(el);
-    });
+    // 初期化
+    moveEntityRandomly();
   </script>
 </body>
 </html>
