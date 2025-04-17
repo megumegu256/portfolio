@@ -90,7 +90,7 @@ function moveEntityRandomly(entity) {
     });
   
     function move() {
-      const shouldChaseMouse = Math.random() < 1.0; // 70%の確率でマウスを追いかける
+      const shouldChaseMouse = Math.random() < 0.9; // 70%の確率でマウスを追いかける
   
       let targetX, targetY;
       if (shouldChaseMouse) {
