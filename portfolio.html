@@ -7,290 +7,317 @@
           name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=yes" />
         <link rel="stylesheet" href="main.css" />
-        <script src="swing.js"></script>
-
+        <script src="swing.js" defer></script>
       </head>
       
 
   <body>
     <script src="entity.js"></script>
-    <h1>Megu's Profile</h1>
-    <div class="mine">
-      <p>
-          所属 - 大阪公立大学工業高等専門学校<br />
-          コース - 知能情報コース<br />
-      </p>
-    </div>
-
-    <br/>
-
-    <h1>Skills</h1>
-    <p>
-      <h2>Languages</h2>
-      <p>
-        <div class="item-list">
-
-          <div class="item">
-            <figure class="image"><img src="./images/python.png" width="100%" /></figure>
-            <h3 class="title">Python</h3>
-            <p class="description">
-              授業、また個人でもGoogle ColaboratoryやTech Fullを通して学習しています。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/C.png" width="100%" /></figure>
-            <h3 class="title">C</h3>
-            <p class="description">
-              プログラミング研究部でのパソコン甲子園の競技部門で使用しました。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/C++.png" width="100%" /></figure>
-            <h3 class="title">C++</h3>
-            <p class="description">
-              プログラミング研究部で最初に勉強を始めた言語です。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/Arduino.png" width="100%" /></figure>
-            <h3 class="title">Arduino</h3>
-            <p class="description">
-              2年生前期のマイクロコンピュータの授業で学習しました。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/Java.png" width="100%" /></figure>
-            <h3 class="title">Java</h3>
-            <p class="description">
-              Progateで基礎を少し学習しました。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/HTML.png" width="100%" /></figure>
-            <h3 class="title">HTML</h3>
-            <p class="description">
-              1年生の頃の実験実習、また2年生のプログラミングの授業で学習しました。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/CSS.png" width="100%" /></figure>
-            <h3 class="title">CSS</h3>
-            <p class="description">
-              2年生のプログラミングの授業で学習しました。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/hsp.png" width="100%" /></figure>
-            <h3 class="title">Hot Soup Processor</h3>
-            <p class="description">
-              中学校の部活動でゲーム作りを通して学習しました。
-            </p>
-          </div>
-
+    
+    <main class="container">
+      <!-- ヘッダーセクション -->
+      <header class="header-section">
+        <h1>Megu's Profile</h1>
+        <div class="mine">
+          <p>
+              所属 - 大阪公立大学工業高等専門学校<br />
+              コース - 知能情報コース<br />
+          </p>
         </div>
+      </header>
 
-      <h2>Tools</h2>
-      <p>
-        <div class="item-list">
+      <!-- スキルセクション -->
+      <section class="skills-section">
+        <h1>Skills</h1>
+        
+        <section class="skill-category">
+          <h2>Languages</h2>
+          <div class="item-list">
 
-          <div class="item">
-            <figure class="image"><img src="./images/Scratch.png" width="100%" /></figure>
-            <h3 class="title">Scratch</h3>
-            <p class="description">
-              小学生の頃に知り、単純なゲームの開発や座標の検証等に使用しています。
-            </p>
+            <article class="item">
+              <figure class="image"><img src="./images/python.png" width="100%" /></figure>
+              <h3 class="title">Python</h3>
+              <p class="description">
+                授業、また個人でもGoogle ColaboratoryやTech Fullを通して学習しています。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/C.png" width="100%" /></figure>
+              <h3 class="title">C</h3>
+              <p class="description">
+                プログラミング研究部でのパソコン甲子園の競技部門で使用しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/C++.png" width="100%" /></figure>
+              <h3 class="title">C++</h3>
+              <p class="description">
+                プログラミング研究部で最初に勉強を始めた言語です。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/Arduino.png" width="100%" /></figure>
+              <h3 class="title">Arduino</h3>
+              <p class="description">
+                2年生前期のマイクロコンピュータの授業で学習しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/Java.png" width="100%" /></figure>
+              <h3 class="title">Java</h3>
+              <p class="description">
+                Progateで基礎を少し学習しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/HTML.png" width="100%" /></figure>
+              <h3 class="title">HTML</h3>
+              <p class="description">
+                1年生の頃の実験実習、また2年生のプログラミングの授業で学習しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/CSS.png" width="100%" /></figure>
+              <h3 class="title">CSS</h3>
+              <p class="description">
+                2年生のプログラミングの授業で学習しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/hsp.png" width="100%" /></figure>
+              <h3 class="title">Hot Soup Processor</h3>
+              <p class="description">
+                中学校の部活動でゲーム作りを通して学習しました。
+              </p>
+            </article>
+
           </div>
+        </section>
 
-          <div class="item">
-            <figure class="image"><img src="./images/MCreator.png" width="100%" /></figure>
-            <h3 class="title">MCreator</h3>
-            <p class="description">
-              MinecraftのMod開発に使用しています。
-            </p>
+        <section class="skill-category">
+          <h2>Tools</h2>
+          <div class="item-list">
+
+            <article class="item">
+              <figure class="image"><img src="./images/Scratch.png" width="100%" /></figure>
+              <h3 class="title">Scratch</h3>
+              <p class="description">
+                小学生の頃に知り、単純なゲームの開発や座標の検証等に使用しています。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/MCreator.png" width="100%" /></figure>
+              <h3 class="title">MCreator</h3>
+              <p class="description">
+                MinecraftのMod開発に使用しています。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/BlockBench.png" width="100%" /></figure>
+              <h3 class="title">BlockBench</h3>
+              <p class="description">
+                MinecraftのMod開発やリソースパック作りに使用しています。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/GitHub.png" width="100%" /></figure>
+              <h3 class="title">GitHub</h3>
+              <p class="description">
+                1年生の頃の実験実習、また2年生のプログラミングの授業で学習しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/GoogleColaboratory.png" width="100%" /></figure>
+              <h3 class="title">Google Colaboratory</h3>
+              <p class="description">
+                プログラミングの授業で学習し、Pythonの開発環境として使用しています。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/Progate.png" width="100%" /></figure>
+              <h3 class="title">Progate</h3>
+              <p class="description">
+                Python、Javaの基礎学習のために使用しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/VSCode.png" width="100%" /></figure>
+              <h3 class="title">VSCode</h3>
+              <p class="description">
+                Python、C、HTML、CSSなどの開発環境として使用しています。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/TechFul.png" width="100%" /></figure>
+              <h3 class="title">TechFul</h3>
+              <p class="description">
+                Pythonの学習のために使用しています。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/ArduinoIDE.png" width="100%" /></figure>
+              <h3 class="title">ArduinoIDE</h3>
+              <p class="description">
+                2年生の工学基礎実習でArduinoを稼働させるために使用しました。
+              </p>
+            </article>
+
+            <article class="item">
+              <figure class="image"><img src="./images/TinkerCAD.png" width="100%" /></figure>
+              <h3 class="title">TinkerCAD</h3>
+              <p class="description">
+                1年生の実験実習の3Dモデリング、2年生のマイクロコンピュータの授業の回路設計で使用しました。
+              </p>
+            </article>
+
           </div>
+        </section>
+      </section>
 
-          <div class="item">
-            <figure class="image"><img src="./images/BlockBench.png" width="100%" /></figure>
-            <h3 class="title">BlockBench</h3>
-            <p class="description">
-              MinecraftのMod開発やリソースパック作りに使用しています。
-            </p>
-          </div>
+      <!-- ワークスセクション -->
+      <section class="works-section">
+        <h1>Works</h1>
 
-          <div class="item">
-            <figure class="image"><img src="./images/GitHub.png" width="100%" /></figure>
-            <h3 class="title">GitHub</h3>
-            <p class="description">
-              1年生の頃の実験実習、また2年生のプログラミングの授業で学習しました。
-            </p>
-          </div>
-
-
-
-          <div class="item">
-            <figure class="image"><img src="./images/GoogleColaboratory.png" width="100%" /></figure>
-            <h3 class="title">Google Colaboratory</h3>
-            <p class="description">
-              プログラミングの授業で学習し、Pythonの開発環境として使用しています。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/Progate.png" width="100%" /></figure>
-            <h3 class="title">Progate</h3>
-            <p class="description">
-              Python、Javaの基礎学習のために使用しました。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/VSCode.png" width="100%" /></figure>
-            <h3 class="title">VSCode</h3>
-            <p class="description">
-              Python、C、HTML、CSSなどの開発環境として使用しています。
-            </p>
-          </div>
-
-
-
-          <div class="item">
-            <figure class="image"><img src="./images/TechFul.png" width="100%" /></figure>
-            <h3 class="title">TechFul</h3>
-            <p class="description">
-              Pythonの学習のために使用しています。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/ArduinoIDE.png" width="100%" /></figure>
-            <h3 class="title">ArduinoIDE</h3>
-            <p class="description">
-              2年生の工学基礎実習でArduinoを稼働させるために使用しました。
-            </p>
-          </div>
-
-          <div class="item">
-            <figure class="image"><img src="./images/TinkerCAD.png" width="100%" /></figure>
-            <h3 class="title">TinkerCAD</h3>
-            <p class="description">
-              1年生の実験実習の3Dモデリング、2年生のマイクロコンピュータの授業の回路設計で使用しました。
-            </p>
-          </div>
-
-        </div>
-    </p>
-
-    <br/>
-
-    <h1>Works</h1>
-    <p>
-      <h2>一般項生成プログラム</h2>
-      <p>
-        <h3>制作時期:2023年7月～2023年9月, 作業時間:約74時間</h3>
-        <div class="pic0"><img src="./images/General.png" width="100%" /></div>
-        <p>
+        <article class="work">
+          <h3>一般項生成プログラム</h3>
+          <p>
+            <strong>制作時期:</strong>2023年7月～2023年9月, <strong>作業時間:</strong>約74時間
+          </p>
+          <div class="pic0"><img src="./images/General.png" width="100%" /></div>
+          <p>
             入力した数列から繰り返し階差数列を求め、一般項を導き出すプログラムを作成しました。<br/>
             お試しは<a href="https://github.com/megumegu256/Colab_General.git">こちら</a>
-        </p>
-
-      <p>
-        <h2>避難シミュレーション</h2>
-        <p>
-          <h3>制作時期:2023年7月～2024年1月</h3>
-          <p>
-              先輩の研究を引き継ぎ、他4人とUnityで共同開発を行いました。私たちが通う大阪公立大学工業高等専門学校の専門棟が舞台で、もし地震のように避難を必要する事態が発生した場合を想定して、どのルートから脱出を試みればよいかをVRでより臨場感を持ってシミュレーションすることができます。<br/>
-              <a href=""></a>
           </p>
+        </article>
 
-      <h2>スイカDEゲーム</h2>
-      <p>
-        <h3>高専祭</h3>
-        <div class="pic1"><img src="./images/watermelon.png" width="100%" /></div>
-        <p>
+        <article class="work">
+          <h3>避難シミュレーション</h3>
+          <p>
+            <strong>制作時期:</strong>2023年7月～2024年1月
+          </p>
+          <p>
+            先輩の研究を引き継ぎ、他4人とUnityで共同開発を行いました。私たちが通う大阪公立大学工業高等専門学校の専門棟が舞台で、もし地震のように避難を必要する事態が発生した場合を想定して、どのルートから脱出を試みればよいかをVRでより臨場感を持ってシミュレーションすることができます。<br/>
+            <a href=""></a>
+          </p>
+        </article>
+
+        <article class="work">
+          <h3>スイカDEゲーム</h3>
+          <p>
+            <strong>制作時期:</strong>高専祭
+          </p>
+          <div class="pic1"><img src="./images/watermelon.png" width="100%" /></div>
+          <p>
             活動班で作成したヨッシーたまごとスイカゲームを融合させた落ちものパズルの、ゲームプレイの基盤となるプログラムをHot Soup Processorで作成しました。<br/>
             完成品のお試しは<a href="https://kunikyu.github.io/groupf/egg">こちら</a>
-        </p>
+          </p>
+        </article>
 
-      <h2>Dimensiony</h2>
-      <p>
-        <h3>制作時期:2023年12月20日～2024年1月14日, 作業時間:約23時間</h3>
-        <div class="pic0"><img src="./images/pic2.png" width="100%" /></div>
-        <div class="pic0"><img src="./images/pic3.png" width="100%" /></div>
-        <div class="pic0"><img src="./images/pic4.png" width="100%" /></div>
-        <p>
+        <article class="work">
+          <h3>Dimensiony</h3>
+          <p>
+            <strong>制作時期:</strong>2023年12月20日～2024年1月14日, <strong>作業時間:</strong>約23時間
+          </p>
+          <div class="pic0"><img src="./images/pic2.png" width="100%" /></div>
+          <div class="pic0"><img src="./images/pic3.png" width="100%" /></div>
+          <div class="pic0"><img src="./images/pic4.png" width="100%" /></div>
+          <p>
             x,y,zの三次元上の点と軸周りの回転を利用して、三次元の立体を二次元に射影して表現するプログラムを作成しました。複数の機能があり、拡大率の調整(四段階)、回転前、後の点の表示切替、点同士を結ぶ線の追加、x軸、y軸、z軸周りの自動回転の速度、回転角度の調整、点の追加、点の座標再設定などができます。緑、赤、黄色、水色の長方形をクリックすると、それぞれ設定をすることができます。右側のGUIから、拡大率は"Zoom"の横の緑の正方形、回転前、後の点の表示切替は"Before","After"の横の黄色、赤の正方形、後述する点と点を結ぶ線を追加した後の消去は"Lines"の横の赤い長方形をクリックすることで調整が可能です。また、その他は整数の入力をすることで調整が可能です。調整したい要素の長方形をクリックし、中央の下にある入力欄が青から緑に変わった後、"0123456789-,"の数字と記号からそれぞれに合った形式で入力し、SPACEキーで実行、BACKSPACEキーで入力内容の取り消しができます。線の追加は、"Lines"の横の緑の長方形を繰りクリックし、結びたい2つの点の番号を","区切りで2つ入力(例:0,2)、x軸、y軸、z軸周りの自動回転の速度は、右側中央の緑の正方形3つが左からx,y,z軸周りの回転速度を一つずつ整数で入力(例:30)、その下の長方形がx,y,z軸周りの回転角度を","区切りで3つの整数を入力(例:45,30,-135)、その下の長方形も同じ形式で新たな点を合計8つまで座標を指定して追加(例:1,0,-1)、左の水色の長方形も同じく座標を入力することで再設定(例:-1,-2,0)することができます。<br/>
             完成品のpythonファイルは<a href="https://github.com/megumegu256/Dimension.git">こちら</a>
-        </p>
+          </p>
+        </article>
 
-      <h2>Dimensiony-Arowana</h2>
-      <p>
-        <h3>制作時期:2024年2月, 作業時間:約20時間</h3>
-        <div class="pic0"><img src="./images/pic5.png" width="100%" /></div>
-        <div class="pic0"><img src="./images/pic6.png" width="100%" /></div>
-        <div class="pic0"><img src="./images/pic7.png" width="100%" /></div>
-        <p>
+        <article class="work">
+          <h3>Dimensiony-Arowana</h3>
+          <p>
+            <strong>制作時期:</strong>2024年2月, <strong>作業時間:</strong>約20時間
+          </p>
+          <div class="pic0"><img src="./images/pic5.png" width="100%" /></div>
+          <div class="pic0"><img src="./images/pic6.png" width="100%" /></div>
+          <div class="pic0"><img src="./images/pic7.png" width="100%" /></div>
+          <p>
             以前に3次元の立体を射影して2次元の平面図形として映し出す"Dimensiony"というプログラムを制作した。この点を映し出すプログラムを流用し、入力した情報をもとにn次元座標上にある点を軸周りの回転によって移動させ、その座標を出力するプログラムを制作した。操作方法は、ウィンドウに表示されている入力欄に、何次元の座標上の点を表示するかをn次元として、n（n>=2）、n個の座表要素（x,y,z,...など）、comb(n,2)通りの軸周りの回転角、をスペース区切りで入力する。（例えば、4次元座標上の点で、4つの座標要素x=1、y=1、z=0、w=0、comb(4,2)=6つの軸周りの回転角を45、45、0、0、60、60に指定すると、"4 1 1 0 0 45 45 0 0 60 60"と入力する。）指定した後、実行ボタンを押すことで、ウィンドウ下部に座標表示、新たに開いたウィンドウで図を表示する。<br/>
             完成品のpythonファイルは<a href="https://github.com/megumegu256/Dimensiony-Arowana.git">こちら</a>
-        </p>
-
-        <h2>Dimensiony-Salamander</h2>
-        <p>
-          <h3>制作時期:2024年6月</h3>
-          <p>
-              Hot Soup Processorで開発を行い、n次元超立体を表現することが可能になった、"Dimensiony-Arowana"のグレードアップバージョンです。<br/>
-              <a href=""></a>
           </p>
+        </article>
 
-        <h2>JavaScript解説 + Dimensiony-Lizard</h2>
-        <p>
-          <h3>制作時期:2024年7月</h3>
+        <article class="work">
+          <h3>Dimensiony-Salamander</h3>
           <p>
-              JavaScriptの基本的な知識や使い方に関する解説を行いました。さらに"Dimensiony-Salamander"のグレードアップバージョンである"Dimensiony-Lizard"を開発し、座標の入力やスムーズな図形表示などを実現させました。<br/>
-              <a href="https://megumegu256.github.io/JavaScriptExp/">こちらから</a>
+            <strong>制作時期:</strong>2024年6月
           </p>
-        
-        <h2>食品ロスを抑える(共同開発)</h2>
-        <p>
-          <h3>制作時期:2024年10月</h3>
           <p>
-
-              <a href=""></a>
+            Hot Soup Processorで開発を行い、n次元超立体を表現することが可能になった、"Dimensiony-Arowana"のグレードアップバージョンです。<br/>
+            <a href=""></a>
           </p>
+        </article>
 
-        <h2>DIA Blog</h2>
-        <p>
-          <h3>制作時期:2024年11月14日～2025年2月22日</h3>
-          
+        <article class="work">
+          <h3>JavaScript解説 + Dimensiony-Lizard</h3>
           <p>
-              "DIA Blog"は、普段の生活や日常の中で起きた出来事の記録や日記等、考えたことや感じたことを様々な人に共有することを主な使用用途とし、一般の人々を対象としている。
+            <strong>制作時期:</strong>2024年7月
+          </p>
+          <p>
+            JavaScriptの基本的な知識や使い方に関する解説を行いました。さらに"Dimensiony-Salamander"のグレードアップバージョンである"Dimensiony-Lizard"を開発し、座標の入力やスムーズな図形表示などを実現させました。<br/>
+            <a href="https://megumegu256.github.io/JavaScriptExp/">こちらから</a>
+          </p>
+        </article>
+
+        <article class="work">
+          <h3>食品ロスを抑える(共同開発)</h3>
+          <p>
+            <strong>制作時期:</strong>2024年10月
+          </p>
+          <p>
+            <a href=""></a>
+          </p>
+        </article>
+
+        <article class="work">
+          <h3>DIA Blog</h3>
+          <p>
+            <strong>制作時期:</strong>2024年11月14日～2025年2月22日
+          </p>
+          <p>
+            "DIA Blog"は、普段の生活や日常の中で起きた出来事の記録や日記等、考えたことや感じたことを様々な人に共有することを主な使用用途とし、一般の人々を対象としている。
           </p>
           <div class="pic0"><img src="./images/dia-app.png" width="100%" /></div>
           <div class="pic0"><img src="./images/dia-app_admin_posts.png" width="100%" /></div>
           <div class="pic0"><img src="./images/dia-app_admin_posts_[id].png" width="100%" /></div>
           <p>
-            リポジトリ URL</br><a href="https://github.com/megumegu256/next-blog-app.git">https://github.com/megumegu256/next-blog-app.git</a></br>
-            公開 URL</br><a href="https://next-blog-app-megumegu256.vercel.app/">https://next-blog-app-megumegu256.vercel.app/</a>
+            <strong>リポジトリ URL</strong><br/><a href="https://github.com/megumegu256/next-blog-app.git">https://github.com/megumegu256/next-blog-app.git</a><br/>
+            <strong>公開 URL</strong><br/><a href="https://next-blog-app-megumegu256.vercel.app/">https://next-blog-app-megumegu256.vercel.app/</a>
           </p>
+        </article>
 
-        <h2>Linux(Ubuntu)サーバの構築および運用管理の手順書</h2>
-        <p>
-          <h3>制作時期:2024年12月</h3>
+        <article class="work">
+          <h3>Linux(Ubuntu)サーバの構築および運用管理の手順書</h3>
           <p>
-
-              <a href="https://github.com/megumegu256/3I-16-Infrastructure_Construction_Basic_Training/blob/main/3I-16-%E6%89%8B%E9%A0%86%E6%9B%B8.md">こちらから</a>
+            <strong>制作時期:</strong>2024年12月
           </p>
+          <p>
+            <a href="https://github.com/megumegu256/3I-16-Infrastructure_Construction_Basic_Training/blob/main/3I-16-%E6%89%8B%E9%A0%86%E6%9B%B8.md">こちらから</a>
+          </p>
+        </article>
 
-  </p>
+      </section>
+    </main>
 
-  
   </body>
-  
   
 </html>

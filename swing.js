@@ -1,46 +1,61 @@
 let lastScroll = 0;
 let scrollTimeout;
+let isScrolling = false;
 
 window.addEventListener('scroll', function () {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   // Calculate rotation based on scroll difference
-  let rotation = (lastScroll - currentScroll) / 2; // Adjust swing intensity here
-  rotation = Math.max(-10, Math.min(10, rotation)); // Limit the swing to 10 degrees in either direction
+  let rotation = (lastScroll - currentScroll) / 2;
+  rotation = Math.max(-15, Math.min(15, rotation));
 
   const items = document.querySelectorAll('.item');
 
-  // Apply rotation during scrolling
+  // Only apply animation if we're scrolling
+  if (!isScrolling) {
+    isScrolling = true;
+    items.forEach(item => {
+      item.style.transformOrigin = 'top center';
+    });
+  }
+
+  // Apply rotation during scrolling with improved easing
   items.forEach(item => {
-    item.style.transformOrigin = 'top center';
-    item.style.transition = ''; // No transition during scrolling
-    item.style.transform = `rotate3d(0, 0, 1, ${rotation}deg)`;
+    item.style.transition = '';
+    item.style.transform = `rotate3d(0, 0, 1, ${rotation}deg) scale(1)`;
   });
 
   lastScroll = currentScroll;
 
-  // Clear the previous timeout if it exists
   clearTimeout(scrollTimeout);
 
   // Set a timeout to start the oscillation after scrolling stops
   scrollTimeout = setTimeout(() => {
-    let currentAngle = rotation; // Start with the current rotation angle
+    let currentAngle = rotation;
+    let oscillationPhase = 0;
+    const maxOscillations = 10;
+    let oscillationCount = 0;
+
     const interval = setInterval(() => {
-      currentAngle *= 0.9; // Gradually reduce the angle (damping effect)
-      const oscillation = currentAngle * Math.sin(Date.now() / 100); // Create a sine wave for oscillation
+      oscillationCount++;
+      currentAngle *= 0.92;
+      oscillationPhase += Math.PI / 8;
+      
+      const oscillation = currentAngle * Math.sin(oscillationPhase);
 
       items.forEach(item => {
-        item.style.transition = 'transform 0.1s ease-out'; // Short transition for smooth oscillation
-        item.style.transform = `rotate3d(0, 0, 1, ${oscillation}deg)`;
+        item.style.transition = 'transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        item.style.transform = `rotate3d(0, 0, 1, ${oscillation}deg) scale(1)`;
       });
 
-      if (Math.abs(currentAngle) < 0.1) { // Stop when the angle is very small
-        clearInterval(interval); // Stop the oscillation
+      if (Math.abs(currentAngle) < 0.1 || oscillationCount > maxOscillations) {
+        clearInterval(interval);
+        isScrolling = false;
         items.forEach(item => {
-          item.style.transition = 'transform 0.5s ease-out'; // Smooth transition back to original position
-          item.style.transform = 'rotate3d(0, 0, 1, 0deg)'; // Reset rotation
+          item.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.320, 1)';
+          item.style.transform = 'rotate3d(0, 0, 1, 0deg) scale(1)';
         });
       }
-    }, 50); // Adjust interval timing as needed (50ms in this case)
-  }, 200); // Adjust delay as needed (200ms in this case)
+    }, 50);
+  }, 150);
 });
